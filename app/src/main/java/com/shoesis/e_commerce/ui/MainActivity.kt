@@ -1,0 +1,58 @@
+package com.shoesis.e_commerce.ui
+
+import android.os.Bundle
+import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.shoesis.e_commerce.R
+import dagger.hilt.android.AndroidEntryPoint
+import com.google.firebase.FirebaseApp
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // Initialize Firebase
+        FirebaseApp.initializeApp(this)
+
+        bottomBar()
+    }
+
+    private fun bottomBar() {
+        val bottomBar = findViewById<BottomNavigationView>(R.id.bottomNav)
+        bottomBar.menu.getItem(2).isEnabled = true
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        NavigationUI.setupWithNavController(
+            bottomBar,
+            navHostFragment.navController
+        )
+
+        val fab = findViewById<FloatingActionButton>(R.id.fab)
+
+        fab.setOnClickListener {
+            navHostFragment.navController.navigate(R.id.payment_graph)
+            bottomBar.isSelected = false
+        }
+
+        navHostFragment.navController.addOnDestinationChangedListener { _, destination, _ ->
+            if ((destination.id == R.id.signInFragment) ||
+                (destination.id == R.id.signUpFragment) ||
+                (destination.id == R.id.splashFragment)
+            ) {
+                bottomBar.visibility = View.GONE
+                fab.visibility = View.GONE
+            } else {
+                bottomBar.visibility = View.VISIBLE
+                fab.visibility = View.VISIBLE
+            }
+        }
+    }
+}

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/profileFragmentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <View
+                android:id="@+id/profileTopPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/primaryColor"
+                android:clickable="false"
+                android:focusable="false"
+                android:onClick="openOrders" />
+
+            <ImageView
+                android:id="@+id/btnSignOut"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:contentDescription="@string/signout"
+                android:src="@drawable/ic_logout_24" />
+
+            <ImageView
+                android:id="@+id/profileImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/profilepic"
+                android:scaleType="centerCrop"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/alata"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvProfileGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfileName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/secondaryColor"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonProfileEditProfile"
+                style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProfileGender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primaryColor"
+                android:clickable="true"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:fontFamily="@font/alata"
+                android:text="@string/edit_profile"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                app:icon="@drawable/ic_edit"
+                app:iconSize="26dp"
+                app:iconTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.5dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvProfileAddresses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonProfileEditProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/secondaryDarkColor"
+                android:clickable="false"
+                android:elevation="8dp"
+                android:focusable="false"
+                android:onClick="expand"
+                android:textColor="@android:color/white"
+                app:strokeColor="@color/primaryColor"
+                app:strokeWidth="0.5dp">
+
+                <RelativeLayout
+                    android:id="@+id/cvAddressesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/cvOrderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/lightGray"
+                        android:focusable="false" />
+
+                    <ImageView
+                        android:id="@+id/imageOrders"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="6dp"
+                        android:contentDescription="@string/imagehistory"
+                        android:focusable="false"
+                        android:src="@drawable/ic_apartment"
+                        app:tint="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/tvAddresses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="3.5dp"
+                        android:layout_toEndOf="@id/imageOrders"
+                        android:focusable="false"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/addresses"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/btnOpenAddresses"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:contentDescription="@string/buttonopenorders"
+                        android:src="@drawable/ic_arrow_circle_down" />
+
+                    <LinearLayout
+                        android:id="@+id/expandableLayoutAddresses"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/imageOrders"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvAddresses"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:layout_marginVertical="16dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvAddressesNotFound"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="25dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/imageNoAddressError"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="center"
+                                    android:alpha="0.8"
+                                    android:contentDescription="@string/imageerrornotfound"
+                                    android:src="@drawable/ic_error"
+                                    app:tint="@color/lightRed" />
+
+                                <TextView
+                                    android:id="@+id/tvNoAddressError"
+                                    android:layout_width="300dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:alpha="0.5"
+                                    android:fontFamily="@font/alata"
+                                    android:text="@string/you_haven_t_added_address_yet_when_you_shop_you_can_add_address"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20sp" />
+
+                            </LinearLayout>
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvCurrentOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvProfileAddresses"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="64dp"
+                android:elevation="8dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                app:strokeColor="@color/secondaryDarkColor"
+                app:strokeWidth="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/imageCurrentOrders"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/delivering" />
+
+                    <TextView
+                        android:id="@+id/tvCurrentOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageCurrentOrders"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/current_orders"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="24sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/nestedCvCurrentOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tvCurrentOrder">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCurrentOrders"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/cvOrderView"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginHorizontal="8dp" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvNoCurrentOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvProfileAddresses"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="64dp"
+                android:elevation="8dp"
+                android:visibility="visible"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                app:strokeColor="@color/primaryDarkColor"
+                app:strokeWidth="0.5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/imageNoCurrentOrders"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/noorder" />
+
+                    <TextView
+                        android:id="@+id/tvNoCurrentOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageNoCurrentOrders"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/no_orders_here"
+                        android:textColor="@color/primaryDarkColor"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvNoCurrentOrderGoHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNoCurrentOrder"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/go_shopping"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/btnGoHome"
+                        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvNoCurrentOrderGoHome"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/white"
+                        android:elevation="8dp"
+                        android:fontFamily="@font/alata"
+                        android:text="@string/go_shop"
+                        android:textColor="@color/secondaryColor"
+                        android:textSize="16sp"
+                        app:icon="@drawable/ic_shopping_basket"
+                        app:iconTint="@color/primaryColor"
+                        app:strokeColor="@color/primaryDarkColor"
+                        app:strokeWidth="0.4dp" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

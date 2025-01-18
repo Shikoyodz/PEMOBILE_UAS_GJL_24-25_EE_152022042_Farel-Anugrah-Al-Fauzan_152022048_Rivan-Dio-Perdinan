@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "351804340140",
+    "firebase_url": "https://ecommerce-shoes-1c735-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ecommerce-shoes-1c735",
+    "storage_bucket": "ecommerce-shoes-1c735.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:351804340140:android:dd876214604e7b7d6e6c09",
+        "android_client_info": {
+          "package_name": "com.shoesis.e_commerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB626CP3nmNpjXCEAxcJQmb8BuYQqU85k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,37 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.ECommerce" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorPrimaryVariant">#FFEB3B</item>
+        <item name="colorOnPrimary">#B86E00</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#2196F3</item>
+        <item name="colorSecondaryVariant">#00BCD4</item>
+        <item name="colorOnSecondary">#0226F1</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/gray</item>
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="MyDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowMinWidthMinor">75%</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_card</item>
+    </style>
+</resources>

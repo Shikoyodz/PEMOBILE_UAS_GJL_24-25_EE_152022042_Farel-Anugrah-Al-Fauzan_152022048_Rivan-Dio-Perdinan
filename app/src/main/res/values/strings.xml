@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">shoeses</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Sign In</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="you_don_t_have_an_account_s_gn_up_now">You don\'t have an account? Sıgn Up Now</string>
+    <string name="go_back_to">Go back to,</string>
+    <string name="choose_your_gender">Choose Your Gender</string>
+    <string name="imagemale">imageMale</string>
+    <string name="imagefemale">imageFemale</string>
+    <string name="register">Register</string>
+    <string name="man">Man</string>
+    <string name="woman">Woman</string>
+    <string name="newest">Newest🔥</string>
+    <string name="fashion">Fashion</string>
+    <string name="electronics">Electronics</string>
+    <string name="home_amp_furniture"><![CDATA[Home & Furniture]]></string>
+    <string name="cosmetic">Cosmetic</string>
+    <string name="brandPic">brandPic</string>
+    <string name="indonsia_rp">Rp</string>
+    <string name="productcardimage">productCardImage</string>
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorites_w_unicode">Favorites ♥</string>
+    <string name="basket">Basket</string>
+    <string name="profile">Profile</string>
+    <string name="cart">Cart</string>
+    <string name="search">Search</string>
+    <string name="hurry_up_last">Hurry up last </string>
+    <string name="addtothebasketbutton">addToTheBasketButton</string>
+    <string name="addtothefavbutton">addToTheFavButton</string>
+    <string name="favorite">Favorite ?</string>
+    <string name="favorite_unicode">♥   </string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="orders">Orders</string>
+    <string name="current_orders">Current Orders</string>
+    <string name="imagehistory">imagehistory</string>
+    <string name="profilepic">profilePic</string>
+    <string name="no_orders_here">No Orders Here</string>
+    <string name="go_shopping">Go Shopping ?</string>
+    <string name="go_shop">Go Shop!</string>
+    <string name="signout">signOut</string>
+    <string name="buttonopenorders">buttonOpenOrders</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="go">Go!</string>
+    <string name="closedialog">closeDialog</string>
+    <string name="profile_edit_successful">Profile Edit Successful !</string>
+    <string name="snackbar_success">snackbar_success</string>
+    <string name="not_found_text_message">We didn\'t find what you want. What you are looking for will be in stock one day</string>
+    <string name="imageerrornotfound">imageErrorNotFound</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="total_price">Total Amount</string>
+    <string name="confirm_cart">Confirm Cart</string>
+    <string name="_0">0</string>
+    <string name="you_haven_t_added_anything_to_the_cart">You haven\'t added anything to the cart, go shopping now!</string>
+    <string name="plusitem">plusItem</string>
+    <string name="removeitem">removeItem</string>
+    <string name="imageproductview">imageProductView</string>
+    <string name="you_haven_t_added_anything_to_your_favorites">You haven\'t added anything to your favorites, go and add to favorites now!</string>
+    <string name="payment">Payment</string>
+    <string name="slash">/</string>
+    <string name="card_number">Card Number</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="card_holder_name">Card Holder Name</string>
+    <string name="cvv">CVV</string>
+    <string name="buy">Buy Now !!</string>
+    <string name="chipimage">chipImage</string>
+    <string name="creditcardbrandimage">creditCardBrandImage</string>
+    <string name="confirm">Confirm</string>
+    <string name="ok">OK</string>
+    <string name="payment_completed">Payment Completed! Use with Happiness :)</string>
+    <string name="out_of_stock">Out Of Stock</string>
+    <string name="i_buy">I-Buy</string>
+    <string name="designed_by_farel_and_dio">Designed by Farel A and Rivan Dio</string>
+    <string name="select_address">Select Address</string>
+    <string name="select_your_city">Select Your City</string>
+    <string name="address_name">Address Name</string>
+    <string name="district">District</string>
+    <string name="neighbourhood">Neighbourhood</string>
+    <string name="apartment">Apartment</string>
+    <string name="flat_no">Flat No</string>
+    <string name="default_address">Default Address ?</string>
+    <string name="city">City</string>
+    <string name="no_addresses">No Addresses</string>
+    <string name="no_description">No Description</string>
+    <string name="complete">Complete</string>
+    <string name="street">Street</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="click_and_select_your_address">Click and select your address</string>
+    <string name="Jakarta">Jakarta</string>
+    <string name="comma">,</string>
+    <string name="name_surname">Name Surname</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="address_information">Address Information</string>
+    <string name="addresses">Addresses</string>
+    <string name="you_haven_t_added_address_yet_when_you_shop_you_can_add_address">You haven\'t added address yet. When you shop, you can add address.</string>
+    <string name="Shoeses">Shoeses</string>
+    <string name="splashlogoimage">splashLogoImage</string>
+
+    <string-array name="cities">
+        <item>jakarta</item>
+        <item>Bandung</item>
+        <item>Bogor</item>
+        <item>Tanggerang</item>
+        <item>Depok</item>
+        <item>Bekasi</item>
+        <item>Banten</item>
+        <item>Serang</item>
+        <item>Surabaya</item>
+        <item>Yogyakarta</item>
+        <item>Garut</item>
+        <item>Tasikmalaya</item>
+        <item>Sumedang</item>
+    </string-array>
+
+</resources>
